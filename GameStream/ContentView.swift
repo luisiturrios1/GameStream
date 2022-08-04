@@ -9,39 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
-            Spacer()
-            Color(red: 19/255, green: 30/255, blue: 53/255, opacity: 1.0)
-                .ignoresSafeArea()
-            VStack {
-                Image("app logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 250)
-                    .padding(.bottom, 42)
-                LoginSignUpView()
+        NavigationView {
+            ZStack {
+                Spacer()
+                Color("Background").ignoresSafeArea()
+                VStack {
+                    Image("app logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250)
+                        .padding(.bottom, 42)
+                    LoginSignUpView()
+                }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct LoginSignUpView:View {
-    @State var login = true
+    @State var loginActived = true
     var body: some View {
         VStack {
             HStack() {
                 Spacer()
                 Button("INICIA SESIÓN") {
-                    login = true
-                }.foregroundColor(login ? .white : .gray)
+                    loginActived = true
+                }.foregroundColor(loginActived ? .white : .gray)
                 Spacer()
                 Button("REGÍSTRATE") {
-                    login = false
-                }.foregroundColor(login ? .gray: .white)
+                    loginActived = false
+                }.foregroundColor(loginActived ? .gray: .white)
                 Spacer()
             }
             Spacer(minLength: 42)
-            if login {
+            if loginActived {
                 LoginView()
             } else {
                 SignUpView()
@@ -54,6 +56,7 @@ struct LoginView:View {
     
     @State var email : String = ""
     @State var password : String = ""
+    @State var homeActived : Bool = false
     
     var body: some View {
         ScrollView {
@@ -92,7 +95,9 @@ struct LoginView:View {
                     .font(.footnote)
                     .frame(width: 300, alignment: .trailing)
                     .foregroundColor(Color("Dark cian"))
-                Button(action: {}, label: {
+                Button(action: {
+                    homeActived = true
+                }, label: {
                     Text("INICIAR SESSIÓN")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -135,6 +140,13 @@ struct LoginView:View {
                 }
             }.padding(.horizontal, 77)
         }
+        NavigationLink(
+            destination: HomeView(),
+            isActive: $homeActived,
+            label: {
+                EmptyView()
+            }
+        )
     }
 }
 

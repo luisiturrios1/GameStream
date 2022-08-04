@@ -11,6 +11,7 @@
 		AA1EBF6C289A31F400EA56AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1EBF6B289A31F400EA56AD /* ContentView.swift */; };
 		AA1EBF6E289A31F700EA56AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1EBF6D289A31F700EA56AD /* Assets.xcassets */; };
 		AA1EBF71289A31F700EA56AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA1EBF70289A31F700EA56AD /* Preview Assets.xcassets */; };
+		AA419E9E289BA00500648C90 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA419E9D289BA00500648C90 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		AA1EBF6B289A31F400EA56AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA1EBF6D289A31F700EA56AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA1EBF70289A31F700EA56AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA419E9D289BA00500648C90 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +53,12 @@
 		AA1EBF68289A31F400EA56AD /* GameStream */ = {
 			isa = PBXGroup;
 			children = (
+				AA1EBF6F289A31F700EA56AD /* Preview Content */,
+				AA1EBF6D289A31F700EA56AD /* Assets.xcassets */,
+				AA1EBF70289A31F700EA56AD /* Preview Assets.xcassets */,
 				AA1EBF69289A31F400EA56AD /* GameStreamApp.swift */,
 				AA1EBF6B289A31F400EA56AD /* ContentView.swift */,
-				AA1EBF6D289A31F700EA56AD /* Assets.xcassets */,
-				AA1EBF6F289A31F700EA56AD /* Preview Content */,
+				AA419E9D289BA00500648C90 /* HomeView.swift */,
 			);
 			path = GameStream;
 			sourceTree = "<group>";
@@ -62,7 +66,6 @@
 		AA1EBF6F289A31F700EA56AD /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AA1EBF70289A31F700EA56AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA419E9E289BA00500648C90 /* HomeView.swift in Sources */,
 				AA1EBF6C289A31F400EA56AD /* ContentView.swift in Sources */,
 				AA1EBF6A289A31F400EA56AD /* GameStreamApp.swift in Sources */,
 			);
